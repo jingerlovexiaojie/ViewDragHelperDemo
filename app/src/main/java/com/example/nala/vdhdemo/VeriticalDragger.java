@@ -15,7 +15,7 @@ import android.widget.LinearLayout;
 
 public class VeriticalDragger extends LinearLayout {
 
-        private ViewDragHelper mDragger;
+    private ViewDragHelper mDragger;
     private View mDragView;
 
     public VeriticalDragger(Context context) {
@@ -37,7 +37,7 @@ public class VeriticalDragger extends LinearLayout {
             @Override
             public int clampViewPositionVertical(View child, int top, int dy) {
                 final int topBound = getPaddingTop();
-                final int bottomBound = getHeight() - mDragView.getWidth();
+                final int bottomBound = getHeight() - mDragView.getHeight();
 
                 int newTop = Math.min(Math.max(top,topBound),bottomBound);
                 return newTop;
